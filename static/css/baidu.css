@@ -1,0 +1,576 @@
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+h1{
+  margin: 12px 0 0 0;
+  line-height: 150%; 
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  text-align: center;
+}
+
+body{
+  font-size: 12px;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  background-color: transparent;
+  overflow: auto;
+}
+
+header,
+div.row {
+  margin-left: 0;
+  margin-right: 0; 
+}
+
+header {
+  transition: all .2s;
+  -webkit-transition: all .2s;
+}
+
+header.yl {
+  /*background-color: rgb(20,41,82);*/
+  background-color: rgba(0,0,0, .5);
+  border: none !important;
+  opacity: .9;
+}
+
+header.yl .navbar-header > a.navbar-brand {
+  color: #EBEBEB;
+}
+
+header.yl ul.navbar-nav > li {
+  background-color: transparent !important;
+}
+
+header.yl ul.navbar-nav > li > a {
+  font-size: 14px;
+  color: #CCCCFF;
+  background-color: transparent !important;
+}
+
+header.yl ul.navbar-nav > li > a::before {
+  position: absolute;
+  display: block;
+  content: attr(data-hover);
+  color: #141414;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: opacity .1s linear;
+  -webkit-transition: opacity .1s linear;
+}
+
+header.yl ul.navbar-nav > li > a:hover::before,
+header.yl ul.navbar-nav > li > a:active::before {
+  opacity: 1;
+}
+
+header.sense {
+  background-color: #FFFFFF;
+  border: none !important;
+  box-shadow: 0 2px 3px rgba(55,55,55, .3);
+  -webkit-box-shadow: 0 2px 3px rgba(55,55,55, .3);
+  opacity: .98;
+}
+
+header.sense .navbar-header > a.navbar-brand {
+  color: #141414;
+}
+
+header.sense ul.navbar-nav > li > a {
+  font-size: 14px;
+  color: #141414;
+  background-color: transparent;
+}
+
+header.sense ul.navbar-nav > li > a:hover {
+  color: #FFFFFF;
+  background-color: #C0392B;
+}
+
+div#head {
+  box-sizing: border-box;
+  height: 250px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #224488;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#112244),to(#224488));
+  background-image: -webkit-linear-gradient(top,#112244 0,#224488 100%);
+  background-image: -o-linear-gradient(top,#112244 0,#224488 100%);
+  background-image: linear-gradient(to bottom,#112244 0,#224488 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#112244', endColorstr='#224488', GradientType=0);
+  background-repeat: repeat-x;
+  /*box-shadow: 1px 1px 2px #000;*/
+}
+
+div#head > div.jumbotron {
+  padding-top: 100px;
+  background-color: transparent;
+}
+
+div#head > div.container > h1,
+div#head > div.container > h3,
+div#head > div.container > p,
+div#head > div.jumbotron > div.container > h1,
+div#head > div.jumbotron > div.container > h3,
+div#head > div.jumbotron > div.container > p{
+  color: #fff;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+
+}
+
+div#head > div.container > h1,
+div#head > div.jumbotron > div.container > h1{
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div#head > div.container > h3,
+div#head > div.jumbotron > div.container > h3{
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  div#head > div.container > h1,
+  div#head > div.jumbotron > div.container > h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+
+  div#head > div.container > h3,
+  div#head > div.jumbotron > div.container > h3{
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
+a.white_btn{
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1px;
+  background-color: transparent;
+  color: #fff;
+
+  -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
+     -moz-transition:background-color 0.2s linear, color 0.2s linear; /* Firefox 4 */
+       -o-transition:background-color 0.2s linear, color 0.2s linear; /* Opera */
+          transition:background-color 0.2s linear, color 0.2s linear;
+}
+
+a.white_btn:hover,
+a.white_btn:focus{
+  background-color: #fff;
+  color: #000;
+}
+
+a.whole{
+  border-style: none;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+
+
+  -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
+     -moz-transition:background-color 0.2s linear, color 0.2s linear; /* Firefox 4 */
+       -o-transition:background-color 0.2s linear, color 0.2s linear; /* Opera */
+          transition:background-color 0.2s linear, color 0.2s linear;
+}
+
+a.whole:hover,
+a.whole:focus{
+  background-color: #c0c0ff;
+  color: #fff;
+}
+
+div.main > div{
+    padding: 20px 20px;
+    border: 0;
+    border-bottom: 2px solid #aaa;
+}
+
+@media (max-width: 767px) {
+  div.main > div{
+      padding: 10px 5px;
+  }
+}
+
+div.row > div > h1,
+div.row > div > h3,
+div.row > div > p{
+  margin: 12px 0 0 0;
+  line-height: 150%; 
+  color: #000;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+}
+
+div.row > div > h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.row > div > h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+div.row > div > p,
+div.row > div > ol > li > p,
+div.row > div > ul > li > p{
+  margin: 10px 0 0 0;
+  line-height: 150%; 
+  color: #000;
+  font-size: 14px;
+}
+
+div.row > div > p.info{
+  display: block;
+  border-color: #888;
+  border-width: 1px;
+  border-style: dashed;
+  background-color: transparent;
+  margin: 0 10px auto;
+  padding: 5px 20px;
+
+  color: #555;
+
+}
+
+
+div.container{
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+}
+
+div.single_choice_answer{
+  display: block;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  border-width:  0;
+  background-color: transparent;
+  margin:  2px auto;
+}
+
+
+.left{
+  text-align: left;
+}
+
+.center{
+  text-align: center;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  vertical-align: middle;
+}
+
+.right{
+  text-align: right;
+}
+
+div.login_form{
+    padding: 30px 10px;
+}
+div.login{
+    padding: 40px;
+    margin: 10px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;   
+            border-radius: 5px;
+    background-color: #ebebeb;
+}
+
+
+div.login_group > p > input.form-control{
+    width: 100%;
+}
+
+input#login_password,
+input#login_username,
+input.form_padding{
+  padding-left: 36px;  
+}
+
+div.login_right{
+    height: 100%;
+    vertical-align: middle;
+}
+
+input.login_submit{
+  width: 100%;
+}
+
+div.sord {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  background: #e8e8e8;
+  clear: both;
+}
+
+div.sord > a.left,
+div.sord > a.right {
+  display: block;
+  float: left;
+  background-color: #FFFFFF;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+div.sord > a.left.active,
+div.sord > a.right.active {
+  background-color: transparent;
+}
+
+div.sord > a > p {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+  vertical-align: middle;
+  color: #CC3366;
+}
+
+div.sord > a.active > p {
+  color: #141414;
+}
+
+form.reg_form {
+  background-color: #e8e8e8;
+  padding: 30px;
+  margin: 0;
+}
+
+form.reg_form#double {
+  display: none;
+}
+
+form.reg_form > div {
+  margin-top: 10px;
+  position: relative;
+}
+
+form.reg_form > div > label.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: block;
+  font-family: "Glyphicons Halflings";
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 34px;
+  width: 36px;
+  height: 34px;
+  color: #999999;
+  -webkit-font-smoothing: antialiased;
+}
+
+form.reg_form > div > label.icon.user::before {
+  content: "\e008";
+}
+
+form.reg_form > div > label.icon.major::before {
+  content: "\e136";
+}
+
+form.reg_form > div > label.icon.hobby::before {
+  content: "\e171";
+}
+
+div.callback_error > p{
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* footer style*/
+div.footer{
+  text-align: center;
+  background-color: #ebebeb;
+}
+
+footer > p {
+    font-size: 8px;
+    color: #666;
+}
+
+footer > hr {
+    width: 50%;
+    text-align: left;
+    color: #666;
+}
+
+label.form_label{
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 6px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background: url("../img/form_icon.png") no-repeat;
+    z-index: 20;
+}
+
+
+form.header_search,
+form.header_search > input,
+form.header_search > label{
+  display: block;
+}
+
+form.header_search{
+  vertical-align: middle;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  height: 20px;
+  border: 0 none;
+}
+
+input.header_search{
+  width: 70px;
+  height: 20px;
+  padding: 2px 8px 2px 28px;
+  font-size: 14px;
+  color: #ebebeb;
+  background-color: #444;
+  font-family: inherit;
+  outline: none;
+  border: 0 none;
+  border-radius: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+          tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
+  -webkit-transition: 0.4s ease-in-out; /* Safari and Chrome */
+     -moz-transition: 0.4s ease-in-out; /* Firefox 4 */
+       -o-transition: 0.4s ease-in-out; /* Opera */
+          transition: 0.4s ease-in-out;
+}
+
+input.header_search:focus{
+  width: 140px;
+  color: #232323;
+  background-color: #ebebeb;
+}
+
+
+
+label.search_label{
+    display: block;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 4px;
+    width: 0;
+    height: 20px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background: url("../img/search.png") no-repeat;
+    z-index: 20;
+}
+
+@media (max-width: 767px){
+  form.header_search,
+  input.header_search,
+  label.header_search{
+    background-color: transparent;
+    display: none;
+  }
+}
+
+label.form_label_phone{
+    background-position: 0 0;
+}
+label.form_label_phone_error{
+    background-position: 0 -48px;
+}
+label.form_label_user{
+    background-position: 0 -72px;
+}
+label.form_label_user_error{
+    background-position: 0 -120px;
+}
+label.form_label_password{
+    background-position: 0 -144px;
+}
+label.form_label_password_error{
+    background-position: 0 -192px;
+}
+label.form_label_id{
+    background-position: 0 -216px;
+}
+label.form_label_id_error{
+    background-position: 0 -264px;
+}
+
+/* color define*/
+
+.light_blue{
+  background-color: #aaccff;
+}
+
+.light_red{
+  background-color: #ffddee;
+}
+
+.light_grey{
+  background-color: #f0f0f0;
+}
+/*transition*/
+
+.container.bento {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  border-right: 7px solid rgba(50,100,200, .5);
+  border-bottom: 8px solid rgba(50,100,200, .5);
+}
+
+div.container.main {
+  padding: 40px;
+}
+
+div.container.main > div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+div.container.main > div > h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+div.container.main > div > p {
+  font-size: 14px;
+}
