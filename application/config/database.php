@@ -67,8 +67,8 @@ $db['default']['stricton'] = FALSE;
 
 // Lovers project.
 $db['Lovers']['hostname'] = 'localhost';
-$db['Lovers']['username'] = 'ci2';
-$db['Lovers']['password'] = 'jeffo';
+$db['Lovers']['username'] = '3lover';
+$db['Lovers']['password'] = '3lover';
 $db['Lovers']['database'] = 'Lovers';
 $db['Lovers']['dbdriver'] = 'mysql';
 $db['Lovers']['dbprefix'] = '';
