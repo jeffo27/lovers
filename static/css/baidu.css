@@ -401,6 +401,18 @@ form.reg_form > div > label.icon.hobby::before {
   content: "\e171";
 }
 
+form.reg_form > div > label.icon.mail::before {
+  content: "\2709";
+}
+
+form.reg_form > div > label.icon.heart::before {
+  content: "\e005";
+}
+
+form.reg_form > div > label.icon.phone::before {
+  content: "\e145";
+}
+
 div.callback_error > p{
     font-size: 14px;
     color: #ff0000;

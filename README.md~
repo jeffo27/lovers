@@ -1,27 +1,5 @@
 # 模擬情侶；驚呆了
 
-## UPDATE 4:
-
-* 增加了一个可以看数据的页面 sofarsogood.php
-
-* 更改了图标。
-
-## UPDATE 3:
-
-* 在 People 表中执行：
-
-    ALTER TABLE `People` ADD `school` INT( 1 ) NOT NULL DEFAULT '0';
-
-* 增加校区选项。
-
-	紫金港为0，玉泉为1，西溪为2，华家池为3，之江为4.
-
-	这样增加校区之前报名者的校区值都为紫金港。
-
-* javascript 真是博大精深……
-
-* 我写的代码实在是太丑陋了……
-
 ## UPDATE 2:
 
 * 在 People 表中执行：

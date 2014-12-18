@@ -10,8 +10,6 @@ class Lovers extends CI_Controller {
 
 	public function index()
 	{
-
-		$data['people'] = $this->lovers_model->get_lovers();
 		$data['title'] = '三天模拟情侣活动';
 
 	    $this->load->view('templates/header', $data);
@@ -19,6 +17,20 @@ class Lovers extends CI_Controller {
 	    $this->load->view('templates/footer');
 
 	}
+
+	public function sofarsogood()
+	{
+		$data['people'] = $this->lovers_model->get_lovers();
+		$data['title'] = 'Current Reigster Info';
+
+		$keys = array('名字','性别','专业','年级','住址','手机','邮箱','队伍名');
+		$data['keys_CH'] = $keys;
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('lovers/sofarsogood',$data);
+		$this->load->view('templates/footer');
+	}
+
 
 	public function register()
 	{
@@ -33,11 +45,23 @@ class Lovers extends CI_Controller {
 
 		if($form_name == '1')
 		{
+			$sch_loc = $this->lovers_model->input->post('school');
+			if($sch_loc)
+				$_POST['room_num'] = -1;
+
 			$ready = $this->form_validation->run('single_register');
 			$is_double = 0;
 		}
 		else if($form_name == '2')
 		{
+			$sch_loc_1 = $this->lovers_model->input->post('school_1');
+			$sch_loc_2 = $this->lovers_model->input->post('school_2');
+
+			if($sch_loc_1)
+				$_POST['room_num_1'] = -1;
+			if($sch_loc_2)
+				$_POST['room_num_2'] = -1;
+
 			$ready = $this->form_validation->run('double_register');
 			$is_double = 1;
 		}
@@ -151,7 +175,7 @@ class Lovers extends CI_Controller {
 
 	public function check_phone($phone)
 	{
-		$count = preg_match('/(13|15|18)\d{9}/', $phone);
+		$count = preg_match('/(13|15|18|17)\d{9}/', $phone);
 		if($count)
 			return TRUE;
 		else

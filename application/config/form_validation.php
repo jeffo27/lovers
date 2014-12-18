@@ -48,6 +48,12 @@
 						),
 
 					array(
+						'field'   => 'school',
+						'label'   => 'School Loc',
+		                'rules'   => 'required'
+						),					
+
+					array(
 						'field'   => 'academy',
 						'label'   => '学园',
 		                'rules'   => 'required'
@@ -120,6 +126,12 @@
 						),
 
 					array(
+						'field'   => 'school_1',
+						'label'   => 'School Loc',
+		                'rules'   => 'required'
+						),
+
+					array(
 						'field'   => 'academy_1',
 						'label'   => '学园',
 		                'rules'   => 'required'
@@ -177,6 +189,12 @@
 					array(
 						'field'   => 'hobby_2',
 						'label'   => '兴趣爱好',
+		                'rules'   => 'required'
+						),
+
+					array(
+						'field'   => 'school_2',
+						'label'   => 'School Loc',
 		                'rules'   => 'required'
 						),
 

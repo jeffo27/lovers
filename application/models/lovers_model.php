@@ -9,12 +9,34 @@ class Lovers_model extends CI_Model {
 
 	public function register($is_double)
 	{
+
 		if($is_double == 0)
 		{
+			$sch_loc = $this->input->post('school');
 
-			$room_loc = $this->input->post('academy');
-			$room_loc .= $this->input->post('build_num');
-			$room_loc = $room_loc.'舍'.($this->input->post('room_num'));
+			switch ($sch_loc) {
+				case '0':
+					$room_loc = $this->input->post('academy');
+					$room_loc .= $this->input->post('build_num');
+					$room_loc = $room_loc.'舍'.($this->input->post('room_num'));
+					break;
+				case '1':
+					$room_loc = '玉泉';
+					break;
+				case '2':
+					$room_loc = '西溪';
+					break;
+				case '3':
+					$room_loc = '华家池';
+					break;
+				case '4':
+					$room_loc = '之江';
+					break;
+				
+				default:
+					$room_loc = 'Unkonwn';
+					break;
+			}
 
 			$data = array(
 
@@ -27,6 +49,7 @@ class Lovers_model extends CI_Model {
 			'hobby' => $this->input->post('hobby'),
 			'phone' => $this->input->post('phone'),
 			'mail' => $this->input->post('mail'),
+			'school' => $sch_loc,
 			'room_loc' => $room_loc
 
 			);
@@ -39,9 +62,31 @@ class Lovers_model extends CI_Model {
 			for($id=1; $id<=2; $id++)
 			{
 
-				$room_loc = $this->input->post('academy_'.$id);
-				$room_loc .= $this->input->post('build_num_'.$id);
-				$room_loc = $room_loc.'舍'.($this->input->post('room_num_'.$id));
+				$sch_loc = $this->input->post('school_'.$id);
+
+				switch ($sch_loc) {
+					case '0':
+						$room_loc = $this->input->post('academy_'.$id);
+						$room_loc .= $this->input->post('build_num_'.$id);
+						$room_loc = $room_loc.'舍'.($this->input->post('room_num_'.$id));
+						break;
+					case '1':
+						$room_loc = '玉泉';
+						break;
+					case '2':
+						$room_loc = '西溪';
+						break;
+					case '3':
+						$room_loc = '华家池';
+						break;
+					case '4':
+						$room_loc = '之江';
+						break;
+					
+					default:
+						$room_loc = 'Unkonwn';
+						break;
+				}
 
 				$data = array(
 
@@ -54,6 +99,7 @@ class Lovers_model extends CI_Model {
 					'hobby' => $this->input->post('hobby_'.$id),
 					'phone' => $this->input->post('phone_'.$id),
 					'mail' => $this->input->post('mail_'.$id),
+					'school' => $sch_loc,
 					'room_loc' => $room_loc
 
 					);

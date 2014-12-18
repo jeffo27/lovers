@@ -47,6 +47,8 @@
 
 //$active_group = 'default';
 $active_group = 'Lovers';
+
+// $active_group = 'local';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
@@ -65,7 +67,24 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-// Lovers project.
+// local project.
+$db['local']['hostname'] = 'localhost';
+$db['local']['username'] = 'ci2';
+$db['local']['password'] = 'jeffo';
+$db['local']['database'] = 'Lovers';
+$db['local']['dbdriver'] = 'mysql';
+$db['local']['dbprefix'] = '';
+$db['local']['pconnect'] = TRUE;
+$db['local']['db_debug'] = TRUE;
+$db['local']['cache_on'] = FALSE;
+$db['local']['cachedir'] = '';
+$db['local']['char_set'] = 'utf8';
+$db['local']['dbcollat'] = 'utf8_general_ci';
+$db['local']['swap_pre'] = '';
+$db['local']['autoinit'] = TRUE;
+$db['local']['stricton'] = FALSE;
+
+// website database config.
 $db['Lovers']['hostname'] = 'localhost';
 $db['Lovers']['username'] = '3lover';
 $db['Lovers']['password'] = '3lover';
